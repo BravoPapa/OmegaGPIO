@@ -1,10 +1,13 @@
 from time import strftime
 import omega_gpio
 
+# Function to set RGB LED
 def setrgb(red,green,blue):
   omega_gpio.setoutput(17,1 if red==0 else 0)
   omega_gpio.setoutput(16,1 if green==0 else 0)
   omega_gpio.setoutput(15,1 if blue==0 else 0)
+
+######## Main routine starts here ########
 
 #Initialize pins for RGB LED
 for x in range(15,18):
@@ -49,4 +52,5 @@ while True:
   S=("R" if R==1 else " ") + ("G" if G==1 else " ") + ("B" if B==1 else " ")
   print S
 
+# We'd like to see the dog kennels, please.
 
