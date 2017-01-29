@@ -50,7 +50,7 @@ while True:
   G=1-omega_gpio.readinput(16)
   B=1-omega_gpio.readinput(15)
   S=("R" if R==1 else " ") + ("G" if G==1 else " ") + ("B" if B==1 else " ")
-  print S
+  print(S)
 
 # We'd like to see the dog kennels, please.
 
